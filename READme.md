@@ -15,7 +15,7 @@
     project is mobile responsive first design and @mediaquery fully responsive
 ![mobile responsivenes](./assets/images/phone-view.png)
 ## Live site
-  [Palindrome-site](https://yemataferry.github.io/palindrome/)
+  [Dom-manipulation](https://yemataferry.github.io/Dom-manipulations/)
 ## Author
      **Yemata Ferry**
-     - GitHub: [@yemataferry](https://github.com/yemataferry/palindrome/pull/1)
+     - GitHub: [@yemataferry](https://github.com/yemataferry/Dom-manipulations/pull/1)
