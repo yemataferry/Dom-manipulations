@@ -23,9 +23,9 @@ boxes.appendChild(age)
 boxes.appendChild(submit)
 
 const base = document.getElementById('database')
-const table = document.createElement('table')
+// const table = document.createElement('table')
 
-const Data = [
+let Data = [
   { name: 'Jack Baroski', age: 28 },
   { name: 'Boris Mao', age: 20 },
   { name: 'Joe Dan', age: 30 },
@@ -84,12 +84,13 @@ const research = (checkName, checkAge) => {
     if ((researchName && userName.includes(researchName)) || (checkAge && user.age === checkAge)) {
       return true
     }
+    return false
   })
   return result
 }
 
-// noms.addEventListener('input', research(a, b))
-// age.addEventListener('input', research(a, b))
+name.addEventListener('input', research)
+age.addEventListener('input', research)
 
 displayList(Data)
 
@@ -108,7 +109,7 @@ form.addEventListener('submit', (e) => {
 
 function userDelete () {
   const deleteButtons = document.querySelectorAll('.delete-btn')
-  
+
   deleteButtons.forEach((btn) => {
     btn.addEventListener('click', (event) => {
       const userName = event.target.id
@@ -117,6 +118,7 @@ function userDelete () {
         if (user.name !== userName) {
           return true
         }
+        return false
       })
       console.log(update, userName)
       Data = update
