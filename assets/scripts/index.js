@@ -6,6 +6,7 @@ const form = document.querySelector('form')
 const name = document.createElement('input')
 const age = document.createElement('input')
 const submit = document.createElement('button')
+const refresh = document.querySelector('.material-symbols-outlined')
 
 name.type = 'text'
 age.type = 'Number'
@@ -14,8 +15,8 @@ name.classList.add('noms')
 age.classList.add('ages')
 submit.classList.add('submits')
 
-name.placeholder = 'Name'
-age.placeholder = 'Age'
+name.placeholder = 'Research Name'
+age.placeholder = 'Research Age'
 submit.innerHTML = 'Submit'
 
 boxes.appendChild(name)
@@ -27,12 +28,23 @@ const base = document.getElementById('database')
 
 let Data = [
   { name: 'Jack Baroski', age: 28 },
-  { name: 'Boris Mao', age: 20 },
-  { name: 'Joe Dan', age: 30 },
   { name: 'Ferry Michaelson', age: 25 },
-  { name: 'Ramy Sanchez', age: 19 }
+  { name: 'Ramy Sanchez', age: 19 },
+  { name: 'Jaff David', age: 19 },
+  { name: 'Wah Vanessa', age: 23 },
+  { name: 'Enow John', age: 28 },
+  { name: 'Nora Solonko', age: 28 },
+  { name: 'Hills Carter', age: 28 }
 ]
 console.log(Data)
+
+// Refresh
+
+refresh.addEventListener('click', () => {
+  window.location.reload()
+  displayList(Data)
+})
+
 
 // fxn creating the initials of each name
 
@@ -66,12 +78,23 @@ function displayList (Data) {
         <th>Initials</th>
         <th>Name</th>
         <th>Age</th>
+        <th>Delete</th>
     </tr>
   `
+
+if (Data.length > 0) {
   Data.forEach(function (user, i) {
-    base.innerHTML += researchList(user)
+    base.innerHTML += researchList(user, i)
   })
+
   userDelete()
+} else {
+  base.innerHTML += `
+    <tr>
+        <td colspan="4" class="result">......No User With  these informations found..... </td>
+    </tr>
+  `
+}
 }
 
 // The research function
@@ -88,9 +111,6 @@ const research = (checkName, checkAge) => {
   })
   return result
 }
-
-name.addEventListener('input', research)
-age.addEventListener('input', research)
 
 displayList(Data)
 

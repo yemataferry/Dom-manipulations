@@ -7,65 +7,88 @@
 body {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom, #b9bdd685, #75135dba);
-  margin: 4rem auto;
+  margin: 0 auto;
+  background-color: #868383;
+
 }
 
 .ages {
-  padding: 15px 20px;
-  background-color: #d1d1dd;
+  padding: 15px 14px;
+  background-color: #f4f4fa;
   border-radius: 1rem;
-  font-size: 13px;
-  width: 7rem;
+  font-size: 12px;
+  width: 27vw
 }
 
 .noms {
-  padding: 0.5rem;
-  background-color: #d1d2df;
+  padding: 0 1rem;
+  background-color: #f4f4fa;
   border-radius: 1rem;
-  font-size: 14px;
-  width: 8rem;
+  font-size: 12px;
+  width: 36vw;
 }
 
 header {
   text-align: center;
-  font-size: 4rem;
+  font-size: 0.1px;
+  color: transparent;
 }
 
 #container {
   justify-content: center;
-  padding: 2rem;
-  gap: 1rem;
+  padding: 2rem 1rem;
+  gap: 0.5rem;
   display: flex;
   margin: auto;
   width: 100%;
+  background-color: #5a5858;
 }
 
 main {
   margin: 1rem auto;
-  background: linear-gradient(to bottom, #888daf85, #642a56ba);
   width: 100%;
 }
 
 .submits {
   border-radius: 1rem;
-  background-color: #b6a1b4;
+  background-color: #aca2ab;
+  padding: 1px;
+  font-size: 12px;
 }
 
 table {
-  width: 100%;
-  border: 1px solid gray;
-  background: linear-gradient(to bottom, #b9bdd685, #75135dba);
+  width: 90%;
+  border: 1px solid #5a5858;
   margin: auto;
+  background-color: white;
 }
 
 th {
-  border-right: 1px solid #5a5858;
+  background-color: #6e6c6c;
+  border-right: 1px solid #424141;
   border-bottom: 1px solid #585656;
 }
 
+span {
+  padding-top: 1.5rem;
+  padding-right: 1rem;
+}
+
+#database tr:hover {
+  background-color: #968f91;
+}
+
+#database td,
+#database th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.material-symbols-outlined {
+  color: #0fa830;
+}
+
 .delete-btn {
-  background: linear-gradient(to bottom, #8f95bd85, #aa2889ba);
   padding: 2px;
   border-radius: 2rem;
 }
@@ -80,29 +103,30 @@ th {
   body {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, #b9bdd685, #75135dba);
+    background: whitesmoke;
   }
 
   .ages {
-    padding: 1rem;
-    background-color: #d1d1dd;
+    padding: 1.5rem;
+    background-color: #f4f4fa;
     border-radius: 1rem;
     font-size: 1.1rem;
-    width: 13rem;
+    width: 100%;
   }
 
   .noms {
-    padding: 1.5rem;
-    background-color: #d1d2df;
+    padding: 1rem;
+    background-color: #f1f1f5;
     border-radius: 1rem;
     font-size: 1.1rem;
-    width: 30rem;
+    width: 100%;
   }
 
   header {
     text-align: center;
-    font-size: 4rem;
-    text-shadow: #5a5858;
+    font-size: 3rem;
+    color: #fdffff;
+    padding-right: 9rem;
   }
 
   #container {
@@ -110,44 +134,63 @@ th {
     padding: 3rem;
     gap: 1rem;
     display: flex;
-    width: 50%;
     margin: auto;
+    background-color: #5a5858;
   }
 
   main {
-    width: 50%;
-    margin: 1rem auto;
-    background: linear-gradient(to bottom, #888daf85, #be86b1ba);
+    margin: auto;
+    background-color: #868383;
     padding-bottom: 1.5rem;
-    box-shadow: 20px 20px 20px #252525;
-    transition: transform 0.3s ease-in-out;
+  
   }
 
   .submits {
     font-size: 1.1rem;
-    border-radius: 1rem;
-    background: linear-gradient(to bottom, #b9bdd685, #75135dba);
+    border-radius: 1.5rem;
+    background: #a0a5a4;
     padding: 1rem;
   }
 
   table {
     width: 90%;
     border: 1px solid gray;
-    background: linear-gradient(to bottom, #b9bdd685, #75135dba);
-    font-size: 1.5rem;
+    background: white;
+    font-size: 1.3rem;
     margin: auto;
     text-align: center;
   }
 
   th {
+    background-color: #5a5858;
     padding: 1rem 2rem;
     border-right: 1px solid #5a5858;
     border-bottom: 1px solid #585656;
   }
 
   .delete-btn {
-    background: linear-gradient(to bottom, #b9bdd685, #75135dba);
-    padding: 3px;
+    background: #797575b0;
+    padding: 5px;
     border-radius: 4rem;
+  }
+
+  span {
+    padding-top: 1.5rem;
+    padding-right: 1rem;
+  }
+
+  #database tr:hover {
+    background-color: #968f91;
+  }
+
+  #database td,
+  #database th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  .material-symbols-outlined {
+    cursor: alias;
+    color: #0fa830;
   }
 }
