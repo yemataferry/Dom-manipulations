@@ -45,7 +45,6 @@ refresh.addEventListener('click', () => {
   displayList(Data)
 })
 
-
 // fxn creating the initials of each name
 
 function initials (string) {
@@ -82,19 +81,19 @@ function displayList (Data) {
     </tr>
   `
 
-if (Data.length > 0) {
-  Data.forEach(function (user, i) {
-    base.innerHTML += researchList(user, i)
-  })
+  if (Data.length > 0) {
+    Data.forEach(function (user, i) {
+      base.innerHTML += researchList(user, i)
+    })
 
-  userDelete()
-} else {
-  base.innerHTML += `
-    <tr>
-        <td colspan="4" class="result">......No User With  these informations found..... </td>
-    </tr>
-  `
-}
+    userDelete()
+  } else {
+    base.innerHTML += `
+      <tr>
+          <td colspan="4" class="result">......No User With  these informations found..... </td>
+      </tr>
+    `
+  }
 }
 
 // The research function

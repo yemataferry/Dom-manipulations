@@ -9,7 +9,6 @@ body {
   flex-direction: column;
   margin: 0 auto;
   background-color: #868383;
-
 }
 
 .ages {
@@ -17,7 +16,7 @@ body {
   background-color: #f4f4fa;
   border-radius: 1rem;
   font-size: 12px;
-  width: 27vw
+  width: 27vw;
 }
 
 .noms {
@@ -142,7 +141,6 @@ span {
     margin: auto;
     background-color: #868383;
     padding-bottom: 1.5rem;
-  
   }
 
   .submits {
